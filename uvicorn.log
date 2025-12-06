@@ -1,6 +1,0 @@
-INFO:     Will watch for changes in these directories: ['/home/d/ai_bridge_app']
-INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
-INFO:     Started reloader process [259019] using WatchFiles
-INFO:     Started server process [259038]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
