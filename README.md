@@ -2,6 +2,14 @@
 
 FastAPI service that receives a workflow ID plus a natural-language request, fetches the workflow from n8n, optionally lets an LLM modify the JSON, and returns the result.
 
+## One-command install (fresh Ubuntu/Debian)
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/davixspain/ai-bridge-app/main/scripts/install.sh)"
+```
+
+This installs system deps, clones/updates to `~/ai_bridge_app`, and installs Python deps locally.
+
 ## Configuration (env vars)
 
 - `N8N_BASE_URL` (default `http://localhost:5678`)
@@ -33,3 +41,10 @@ curl -X POST http://localhost:8001/apply-change \
 ```
 
 If `LLM_PROVIDER` is set, the service will call the chosen LLM, PUT the updated workflow back to n8n, and return the modified workflow JSON (plus the n8n save response). Otherwise it returns the original workflow without saving.
+
+## Launcher
+
+If you prefer prompts for env setup and auto-start, use:
+```bash
+cd /home/d/ai_bridge_app && ./run_ai_bridge.sh
+```
